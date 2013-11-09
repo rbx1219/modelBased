@@ -1,0 +1,26 @@
+Please read the IlliGAL Report No. 2006012 and 99016 available on
+the publications archive of the IlliGAL website at 
+http://www-illigal.ge.uiuc.edu/techreps.php3
+
+That report contains instructions on how to compile, run,
+and modify the ECGA code so that you can try it on your own
+problems.
+
+The code is distributed for academic purposes only. It has no warranty
+implied or given, and the authors assume no liability for damage resulting 
+from its use or misuse. If you have any comments or find any bugs please
+send an email to kumara@illigal.ge.uiuc.edu.
+
+For a commercial use of the code please contact prof. David E. Goldberg at
+deg@uiuc.edu.
+
+
+Fernando Lobo, Kumara Sastry, and Georges Harik
+Illinois Genetic Algorithms Laboratory
+Department of Industrial and Enterprise Systems Engineering
+University of Illinois at Urbana-Champaign
+104 S. Mathews Ave., Urbana, IL 61801
+http://www-illigal.ge.uiuc.edu
+http://illigal.blogspot.com
+March 2006
+

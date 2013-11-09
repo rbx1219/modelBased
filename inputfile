@@ -1,0 +1,21 @@
+#
+# Sample parameter file.
+# Don't change the order of the lines in this file.
+#
+BEGIN
+chromosome_length              200
+seed                           0.254534
+population_size                18358
+probability_crossover          1
+tournament_size                16 
+learn_MPM                      on
+stop_criteria                  found_optima
+stop_criteria_argument         0
+#
+# reporting flags
+#
+report_pop                     off
+report_string                  off
+report_fitness                 off
+report_MPM                     on
+END
