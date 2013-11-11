@@ -51,7 +51,7 @@ objfunc.o: objfunc.cpp objfunc.hpp
 	$(CC) $(FLAG) objfunc.cpp
 
 #model
-model.o: model.cpp model.hpp intlist.hpp
+model.o: model.cpp model.hpp intlist.hpp subset.hpp
 #--- ECGA stuff ----------------------------------------------------------
 
 # list of integers in C++

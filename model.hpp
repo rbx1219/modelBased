@@ -1,17 +1,16 @@
-#include "intlist.hpp"
+#include "mpm.hpp"
 #include "population.hpp"
+#include "subset.hpp"
 
 class model
 {
 	public:
-		model(int n);
-		int getBBnum() {return bbnum;}
-		intList * getList() {return BBList;}
-		int * getbestSchemata() {return bestSchemata;}
-		void calculateSchemataFitness(population *pop);
-
+		model(mpm M , population );
+		int * getBestSchemata()	{return BestSchemata;}
+		void calculateSchemata();
 	private:
 		int bbnum;
-		intList *BBList;
-		int * bestSchemata;
+		int * BestSchemata;
+		subset *sets;
+		population pop;
 };
