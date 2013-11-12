@@ -93,8 +93,9 @@ void ecga::run( std::ofstream &outfile )
       mpm MPM( parameter::lchrom );   
       MPM.model( pop, outfile );  
 ////////////////// DELETE Below later/////////////////////////
-     
-	  model *SchemataModel = new model(MPM , pop);
+	  
+	  model *SchemataModel = new model(&MPM , pop);
+	  SchemataModel->calculateSchemata();	
 
 ///////////////// You should done here///////////////////////
       

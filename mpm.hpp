@@ -31,6 +31,12 @@ class mpm
     double  cpc;  // compressed population complexity
 
   public:
+    mpm( const mpm &in ){
+	subsets = new subset[in.n_subsets];
+	for(int i = 0 ; i < in.n_subsets ; i++)
+		subsets[i] = in[i];
+		printf("Jizz\n");
+	}
     mpm( int n_sets );
     ~mpm();
     int num_subsets() { return n_subsets; }

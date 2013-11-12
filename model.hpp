@@ -5,7 +5,7 @@
 class model
 {
 	public:
-		model(mpm M , population *p);
+		model(mpm *M , population *p);
 		~model();
 		int * getBestSchemata()	{return BestSchemata;}
 		void calculateSchemata();

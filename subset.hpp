@@ -33,6 +33,7 @@ class subset
     int size() { return L.length(); }
     long numCounts() { return num_counts; }
     long *counts;      // the frequency counts  (2 ^ L.length() ) 
+    double *fit;
     void space_for_counts( int popsize );
     void insert( int elem ) { L.insert( elem ); }
     void asArray( int *A ) { L.asArray( A ); }
