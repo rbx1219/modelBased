@@ -3,9 +3,9 @@
 # Don't change the order of the lines in this file.
 #
 BEGIN
-chromosome_length              200
+chromosome_length              40
 seed                           0.254534
-population_size                18358
+population_size                1836
 probability_crossover          1
 tournament_size                16 
 learn_MPM                      on
