@@ -1,0 +1,206 @@
+==31718== Memcheck, a memory error detector
+==31718== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==31718== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==31718== Command: ./ecga inputfile output
+==31718== Parent PID: 21148
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404D72: operator<<(std::ostream&, intList&) (intlist.cpp:220)
+==31718==    by 0x40521C: operator<<(std::ostream&, subset&) (subset.cpp:110)
+==31718==    by 0x405B5E: operator<<(std::ostream&, mpm&) (mpm.cpp:74)
+==31718==    by 0x40779E: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:101)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4a0 is 16 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404D72: operator<<(std::ostream&, intList&) (intlist.cpp:220)
+==31718==    by 0x40521C: operator<<(std::ostream&, subset&) (subset.cpp:110)
+==31718==    by 0x405BCC: operator<<(std::ostream&, mpm&) (mpm.cpp:76)
+==31718==    by 0x40779E: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:101)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c620 is 400 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404819: intList::operator=(intList&) (intlist.cpp:55)
+==31718==    by 0x404EF1: subset::operator=(subset&) (subset.cpp:52)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4a0 is 16 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404EF6: subset::operator=(subset&) (subset.cpp:53)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4a8 is 24 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404F06: subset::operator=(subset&) (subset.cpp:54)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4b0 is 32 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404F16: subset::operator=(subset&) (subset.cpp:55)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4b8 is 40 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404F80: subset::operator=(subset&) (subset.cpp:60)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c4c0 is 48 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404F91: subset::operator=(subset&) (subset.cpp:60)
+==31718==    by 0x4067EA: mpm::generate(population*, population*) (mpm.cpp:236)
+==31718==    by 0x4077ED: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:107)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5d7fef0 is 0 bytes inside a block of size 256 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x404EAC: subset::~subset() (subset.cpp:41)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Conditional jump or move depends on uninitialised value(s)
+==31718==    at 0x4032D7: chromosome::asString(char*) (chromosome.cpp:92)
+==31718==    by 0x404500: objfunc(chromosome&) (objfunc.cpp:28)
+==31718==    by 0x403433: chromosome::evaluate() (chromosome.cpp:119)
+==31718==    by 0x403DA6: population::evaluate() (population.cpp:136)
+==31718==    by 0x40781A: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:114)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x40574A: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c490 is 0 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404E94: subset::~subset() (subset.cpp:41)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2cc10 is 1,920 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x404EA1: subset::~subset() (subset.cpp:41)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2cc10 is 1,920 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid free() / delete / delete[] / realloc()
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x404EAC: subset::~subset() (subset.cpp:41)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5c270f0 is 0 bytes after a block of size 0 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x404EAC: subset::~subset() (subset.cpp:41)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid read of size 8
+==31718==    at 0x40475E: intList::~intList() (intlist.cpp:27)
+==31718==    by 0x404EB8: subset::~subset() (subset.cpp:39)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2cbf0 is 1,888 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid write of size 8
+==31718==    at 0x404798: intList::~intList() (intlist.cpp:34)
+==31718==    by 0x404EB8: subset::~subset() (subset.cpp:39)
+==31718==    by 0x405776: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2cbf0 is 1,888 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== Invalid free() / delete / delete[] / realloc()
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407849: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:117)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718==  Address 0x5b2c490 is 0 bytes inside a block of size 1,928 free'd
+==31718==    at 0x4C2A09C: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x40578C: mpm::~mpm() (mpm.cpp:37)
+==31718==    by 0x407775: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== 
+==31718== HEAP SUMMARY:
+==31718==     in use at exit: 362,856 bytes in 1,890 blocks
+==31718==   total heap usage: 39,668 allocs, 37,819 frees, 3,367,108 bytes allocated
+==31718== 
+==31718== 362,856 (32 direct, 362,824 indirect) bytes in 1 blocks are definitely lost in loss record 8 of 8
+==31718==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==31718==    by 0x407750: ecga::run(std::basic_ofstream<char, std::char_traits<char> >&) (ecga.cpp:97)
+==31718==    by 0x401DCD: main (main.cpp:151)
+==31718== 
+==31718== LEAK SUMMARY:
+==31718==    definitely lost: 32 bytes in 1 blocks
+==31718==    indirectly lost: 362,824 bytes in 1,889 blocks
+==31718==      possibly lost: 0 bytes in 0 blocks
+==31718==    still reachable: 0 bytes in 0 blocks
+==31718==         suppressed: 0 bytes in 0 blocks
+==31718== 
+==31718== For counts of detected and suppressed errors, rerun with: -v
+==31718== Use --track-origins=yes to see where uninitialised values come from
+==31718== ERROR SUMMARY: 74144 errors from 17 contexts (suppressed: 2 from 2)

@@ -21,6 +21,7 @@
 #include "population.hpp"
 #include "mpm.hpp"
 #include "utility.hpp"
+#include "model.hpp"
 
 extern randomG RANDOM;
 
@@ -93,10 +94,7 @@ void ecga::run( std::ofstream &outfile )
       MPM.model( pop, outfile );  
 ////////////////// DELETE Below later/////////////////////////
      
-
-
-
-
+	  model *SchemataModel = new model(MPM , pop);
 
 ///////////////// You should done here///////////////////////
       
