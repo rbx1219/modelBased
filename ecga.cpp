@@ -79,6 +79,7 @@ void ecga::run( std::ofstream &outfile )
   while( !done( pop, gen ) )      
     { 
       gen++;
+      parameter::generation = gen;
       //
       // apply selection
       //

@@ -41,6 +41,8 @@ bool   parameter::report_MPM;
 OBJFUNC parameter::objfunc = TRAP;
 bool   parameter::found_optima = false;
 
+int parameter::generation = 0;
+
 randomG RANDOM;
 
 // return the identifier of the stop criteria. return -1 if not found.

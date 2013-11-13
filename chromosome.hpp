@@ -19,6 +19,9 @@
 #include <iostream>
 #include "gene.hpp"
 #include "parameter.hpp"
+#include "model.hpp"
+
+class model;
 
 class chromosome
 {
@@ -33,7 +36,8 @@ class chromosome
     double fitness() { return Fitness; }
     void set_fitness( double fit ) { Fitness = fit; }
     void evaluate();
-    void random();
+    void evaluate(model* M);
+	void random();
     void mutate(double pmut);
     int  length() { return Length; }
     void asString( char *str );

@@ -22,6 +22,8 @@
 #include "chromosome.hpp"
 #include "parameter.hpp"
 
+class chromosome;
+
 class population
 {
   private:

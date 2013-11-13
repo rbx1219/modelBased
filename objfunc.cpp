@@ -15,6 +15,7 @@
 #include "objfunc.hpp"
 #include "chromosome.hpp"
 #include "parameter.hpp"
+#include "model.hpp"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,6 +33,16 @@ double objfunc( chromosome &x )
 	//    
 	double v = objective_func( str, x.length() );
 	delete [] str;
+	return v;
+}
+
+double objfunc(chromosome &x ,model *M)
+{
+	char *str = new char[ x.length() ];
+	x.asString(str);
+
+	double v = objective_func(str , x.length() , M);
+	delete[] str;
 	return v;
 }
 
@@ -76,12 +87,19 @@ double onemax(char *chrom , int lchrom)
 	return unitation(chrom , 0 , lchrom-1);
 }
 
+double correctBB(char *chrom , int lchrom , model *M)
+{
+	return 0.0;
+}
 //
 // Objective function.
 // Change this function to try different problems
 //
 double objective_func( char *chrom, int lchrom )
 {
+
+	std::cout << parameter::generation << std::endl;
+
 	switch (parameter::objfunc)
 	{
 		case ONEMAX:
@@ -95,7 +113,13 @@ double objective_func( char *chrom, int lchrom )
 
 }
 
-
+double objective_func(char *chrom , int lchrom , model* M)
+{
+	if(parameter::generation < 2)
+		return trap(chrom,lchrom);
+	else 
+		return correctBB(chrom , lchrom , M);
+}
 
 
 

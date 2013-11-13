@@ -21,6 +21,8 @@
 #include "subset.hpp"
 #include "population.hpp"
 
+
+class population;
 class mpm
 {
   private:

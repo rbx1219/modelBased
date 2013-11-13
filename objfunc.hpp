@@ -15,11 +15,13 @@
 #ifndef _objfunc_hpp
 #define _objfunc_hpp
 
+#include "model.hpp"
 #include "chromosome.hpp"
 
 double objfunc( chromosome &x );
+double objfunc( chromosome &x , model *M);
 double objective_func( char *chrom, int lchrom );
-
+double objective_func(char *chrom , int lchrom , model* M);
 #endif
 
 

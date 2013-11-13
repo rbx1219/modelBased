@@ -1,7 +1,12 @@
+#ifndef model_H
+#define model_H
+
 #include "mpm.hpp"
 #include "population.hpp"
 #include "subset.hpp"
 
+class population;
+class subset;
 class model
 {
 	public:
@@ -15,3 +20,5 @@ class model
 		subset *sets;
 		population *pop;
 };
+
+#endif

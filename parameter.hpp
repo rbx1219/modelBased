@@ -11,6 +11,7 @@
 //  Modified to be compliant with gcc 3.4 by Kumara Sastry
 //  Date:        March/2006
 
+
 #ifndef _parameter_hpp
 #define _parameter_hpp
 
@@ -35,6 +36,8 @@ class parameter
 
   static OBJFUNC objfunc;
   static bool found_optima;
+
+  static int generation ;
 };
 
 
