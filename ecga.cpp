@@ -15,6 +15,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <string.h>
 
 #include "ecga.hpp"
 #include "parameter.hpp"
@@ -95,9 +96,10 @@ void ecga::run( std::ofstream &outfile )
       MPM.model( pop, outfile );  
 ////////////////// DELETE Below later/////////////////////////
 	  
-	  model *SchemataModel = new model(&MPM , pop);
-	  SchemataModel->calculateSchemata();	
-
+	  //model *SchemataModel = new model(&MPM , pop);
+	  //SchemataModel->calculateSchemata();	
+	 parameter::schemata = new model(&MPM , pop);
+	parameter::schemata->calculateSchemata();
 ///////////////// You should done here///////////////////////
       
       if( parameter::report_MPM ) std::cout << "MPM: " << MPM << std::endl;

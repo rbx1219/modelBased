@@ -117,4 +117,4 @@ std::ostream &operator<< (std::ostream &out, chromosome &chrom)
 
 // evaluate fitness function
 void chromosome::evaluate() { Fitness = objfunc(*this); };
-void chromosome::evaluate(model *M){Fitness = objfunc(*this , M);};
+//void chromosome::evaluate(model *M){Fitness = objfunc(*this , M);};

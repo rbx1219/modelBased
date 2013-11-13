@@ -1,5 +1,32 @@
 #include "model.hpp"
 #include <string.h>
+
+model::model()
+{
+	bbnum = 0;
+	pop = NULL;
+	sets = NULL;
+	BestSchemata = NULL;
+}
+
+model &model::operator=(model &M)
+{
+	if(this == &M)
+		return *this;
+	bbnum = M.bbnum;
+	delete [] BestSchemata;
+	delete [] sets;
+	delete [] pop;
+	BestSchemata = new int[bbnum];
+	sets = new subset[bbnum];
+	*pop = *(M.pop);
+	for(int i = 0 ; i < bbnum ; i++)
+	{
+		sets[i] = M.sets[i];
+		BestSchemata[i] = M.BestSchemata[i];
+	}	
+}
+
 model::model(mpm *M , population *p)
 {	
 	bbnum = M->num_subsets();

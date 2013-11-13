@@ -17,6 +17,7 @@
 
 enum OBJFUNC {TRAP , ONEMAX};
 
+class model;
 class parameter    
 {
  public:
@@ -37,6 +38,7 @@ class parameter
   static OBJFUNC objfunc;
   static bool found_optima;
 
+  static model *schemata;
   static int generation ;
 };
 

@@ -42,6 +42,7 @@ OBJFUNC parameter::objfunc = TRAP;
 bool parameter::found_optima = false;
 
 int parameter::generation = 0;
+model *parameter::schemata = new model();
 
 randomG RANDOM;
 

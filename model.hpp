@@ -5,19 +5,20 @@
 #include "population.hpp"
 #include "subset.hpp"
 
-class population;
-class subset;
 class model
 {
 	public:
+		model & operator=(model &s);
+		model();
 		model(mpm *M , population *p);
 		~model();
 		int * getBestSchemata()	{return BestSchemata;}
 		void calculateSchemata();
+		int get_bbnum() { return bbnum; }
+		subset *sets;		
 	private:
 		int bbnum;
 		int * BestSchemata;
-		subset *sets;
 		population *pop;
 };
 

@@ -19,7 +19,6 @@
 #include "intlist.hpp"
 #include "population.hpp"
 
-class population;
 
 class subset
 {

@@ -16,6 +16,7 @@
 #include "chromosome.hpp"
 #include "parameter.hpp"
 #include "model.hpp"
+#include "utility.hpp"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,17 +35,10 @@ double objfunc( chromosome &x )
 	double v = objective_func( str, x.length() );
 	delete [] str;
 	return v;
+
+
 }
 
-double objfunc(chromosome &x ,model *M)
-{
-	char *str = new char[ x.length() ];
-	x.asString(str);
-
-	double v = objective_func(str , x.length() , M);
-	delete[] str;
-	return v;
-}
 
 //------------------------------------------------------------
 
@@ -87,10 +81,34 @@ double onemax(char *chrom , int lchrom)
 	return unitation(chrom , 0 , lchrom-1);
 }
 
-double correctBB(char *chrom , int lchrom , model *M)
+double correctBB(char *chrom , int lchrom)
 {
-	return 0.0;
+	double result = 0;
+	int *best = parameter::schemata->getBestSchemata();
+	for(int i = 0 ; i < parameter::schemata->get_bbnum() ; i++)
+	{
+		int S = parameter::schemata->sets[i].size();
+		int *schema = new int[S];
+		int *set = new int[S];
+		parameter::schemata->sets[i].asArray(set);
+		long p;
+		for(int j = 0 ; j < S ; j++)
+		{
+			int locus = set[j];
+			if(chrom[locus] == '1')
+				schema[j] = 1;
+			else 
+				schema[j] = 0;
+		}
+		p = decode(schema , S);
+		if(p == best[i])
+			result += S * 1.0;
+		delete [] schema;
+		delete [] set;
+	}
+	return result;
 }
+
 //
 // Objective function.
 // Change this function to try different problems
@@ -98,14 +116,17 @@ double correctBB(char *chrom , int lchrom , model *M)
 double objective_func( char *chrom, int lchrom )
 {
 
-	std::cout << parameter::generation << std::endl;
-
 	switch (parameter::objfunc)
 	{
 		case ONEMAX:
 			return onemax(chrom , lchrom);
+			break;
 		case TRAP:
-			return trap(chrom , lchrom);
+			if(parameter::generation < 2)
+				return trap(chrom , lchrom);
+			else 
+				return correctBB(chrom , lchrom);
+			break;
 		default:
 			puts("assign an objective function");
 			exit(-1);
@@ -113,13 +134,6 @@ double objective_func( char *chrom, int lchrom )
 
 }
 
-double objective_func(char *chrom , int lchrom , model* M)
-{
-	if(parameter::generation < 2)
-		return trap(chrom,lchrom);
-	else 
-		return correctBB(chrom , lchrom , M);
-}
 
 
 
