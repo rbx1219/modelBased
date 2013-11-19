@@ -43,6 +43,8 @@ class chromosome
     chromosome & operator=(const chromosome &chrom);
     gene & operator[](int loci) { return genes[loci]; }
     friend std::ostream &operator<< (std::ostream &out, chromosome &chrom);
+    bool operator ==( char * str);	
+
 };
 
 #endif

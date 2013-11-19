@@ -87,7 +87,6 @@ double correctBB(char *chrom , int lchrom)
 	int *best = parameter::schemata->getBestSchemata();
 	for(int i = 0 ; i < parameter::schemata->get_bbnum() ; i++)
 	{	
-		printf("%d   ",best[i]);
 		int S = parameter::schemata->sets[i].size();
 		int *schema = new int[S];
 		int *set = new int[S];

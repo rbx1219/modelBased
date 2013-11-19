@@ -35,7 +35,7 @@ void ecga::report( std::ofstream &outfile, population *pop, int gen )
   //
   chromosome bestChrom;
   bestChrom = (*pop)[ pop->best() ];
-
+  best = bestChrom;
   //
   // print it
   //

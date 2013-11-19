@@ -162,6 +162,12 @@ int main( int argc, char *argv[] )
 	int lower = 0;
 	int higher = 30000;
 	int mid = 200;
+	char *best  = new char[parameter::lchrom];
+	for(int i = 0 ; i < parameter::lchrom ; i++)
+	{
+		best[i] == '1';
+	}
+
 	while(1)
 	{
 		int i;
@@ -172,7 +178,7 @@ int main( int argc, char *argv[] )
 			parameter::found_optima = false;
 			ecga ECGA;
 			ECGA.run(outfile);
-			if(parameter::found_optima)
+			if(ECGA.best == best)
 			{
 				printf("+");
 				continue;
@@ -194,15 +200,15 @@ int main( int argc, char *argv[] )
 			lower = mid ;
 			mid = (mid+higher)/2; 
 		}
-			if(lower *1.05 >= higher)
-				break;
-			mid = mid / 2 * 2 ;
+		if(lower *1.05 >= higher)
+			break;
+		mid = mid / 2 * 2 ;
 	}
-	
+
 	FILE *Result = fopen("bisectionresult","w");
 	fprintf(Result , "%d\n" , mid);
 	fclose(Result);
-	
+
 	std::cout << "bisection result : " << higher <<std::endl;
 	std::cout << "ECGA done" << std::endl;
 

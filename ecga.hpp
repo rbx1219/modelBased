@@ -17,6 +17,8 @@
 #include <iostream>
 #include <fstream>
 #include "population.hpp"
+#include "chromosome.hpp"
+
 
 class ecga
 {
@@ -28,6 +30,7 @@ class ecga
     ecga() {}
     ~ecga() {}
     void run( std::ofstream &outfile );
+    chromosome best ;	
 };
 
 #endif
