@@ -204,7 +204,7 @@ int main( int argc, char *argv[] )
 			break;
 		mid = mid / 2 * 2 ;
 	}
-
+	delete[] best;
 	FILE *Result = fopen("bisectionresult","w");
 	fprintf(Result , "%d\n" , mid);
 	fclose(Result);

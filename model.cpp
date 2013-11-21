@@ -49,6 +49,7 @@ void model::calculateSchemata()
 				maxfit = sets[i].fit[j] / sets[i].counts[j];
 				BestSchemata[i] = j;
 			}
+		printf("the best schemata is %d \n", BestSchemata[i]);
 	}
 	return ;
 }
@@ -56,5 +57,5 @@ void model::calculateSchemata()
 model::~model()
 {
 	delete pop;
-	delete sets;
+	delete[] sets;
 }
